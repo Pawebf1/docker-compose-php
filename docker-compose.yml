@@ -1,13 +1,21 @@
 version: '3.8'
 
 services:
-  app:
+  composer_install:
+    image: composer
+    volumes:
+      - ./src:/app
+    command: sh -c "composer install --ignore-platform-reqs"
+
+  php:
     build:
       context: bin/php8
     restart: always
     working_dir: /var/www/
     volumes:
       - ./src:/var/www
+      - ./.env:/var/.env
+
   nginx:
     build:
       context: bin/nginx

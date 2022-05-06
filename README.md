@@ -15,7 +15,6 @@ It consists of the following:
 git clone https://github.com/Pawebf1/docker-compose-php.git
 cd docker-compose-php/
 cp sample.env .env
-// modify sample.env as needed
 sudo docker-compose up -d
 // visit localhost
 ```
