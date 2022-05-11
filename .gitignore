@@ -4,7 +4,7 @@
 /storage/mysql
 
 # composer
-/src/vendor/
+/vendor/
 
 # PhpStorm / IDEA
 .idea
